@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const state = {
   ramdata: []
 };
@@ -14,9 +16,11 @@ const actions = {
 
 const mutations = {
   getramhistory(state, history) {
-    console.log(Date() - Date(history[100].last_changed), "mutations");
+    let end_date = moment();
     history.forEach(element => {
-      state.ramdata.push({ t: element.last_changed, y: element.state });
+      if (end_date.diff(element.last_changed, "minutes") < 30) {
+        state.ramdata.push({ t: element.last_changed, y: element.state });
+      }
     });
   }
 };
