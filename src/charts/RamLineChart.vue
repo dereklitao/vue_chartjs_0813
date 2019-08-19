@@ -29,7 +29,7 @@ export default {
             {
               type: "time",
               time: {
-                unit: "minute"
+                unit: "hour"
               }
             }
           ]

@@ -14,7 +14,7 @@ const actions = {
 
 const mutations = {
   getramhistory(state, history) {
-    console.log(history.length, "mutations");
+    console.log(Date() - Date(history[100].last_changed), "mutations");
     history.forEach(element => {
       state.ramdata.push({ t: element.last_changed, y: element.state });
     });
