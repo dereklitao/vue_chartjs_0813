@@ -12,32 +12,41 @@
     </v-app-bar>
 
     <v-content>
-      <v-btn color="success">button</v-btn>
+      <v-container grid-list-lg>
+        <v-layout row wrap justify-center align-center>
+          <v-flex shrink>
+            <RamLineChart></RamLineChart>
+          </v-flex>
+          <v-btn color="success" @click="clickButton">button</v-btn>
+        </v-layout>
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
+import RamLineChart from "@/charts/RamLineChart";
 export default {
   name: "App",
   components: {
-    HelloWorld
+    HelloWorld,
+    RamLineChart
   },
   methods: {
     clickButton: function() {
-      console.log("HELLO");
+      console.log("Hello World");
     }
   },
   data: function() {
     return {
       name: "testName"
     };
-  },
-  beforeMount() {
-    console.log(this);
-    this.$options.sockets.onmessage = data =>
-      console.log(JSON.parse(data.data));
   }
+  // beforeMount() {
+  //   console.log(this);
+  //   this.$options.sockets.onmessage = data =>
+  //     console.log(JSON.parse(data.data));
+  // }
 };
 </script>

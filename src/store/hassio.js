@@ -1,7 +1,7 @@
 export const authinfo = {
   type: "auth",
   access_token:
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI3YWVlZmRlYzVkMjA0YjM2YTA0N2VhYWFiMDQwY2Y3NyIsImlhdCI6MTU2NTY3MzcwNywiZXhwIjoxODgxMDMzNzA3fQ.97WnzhKW5W1Oj4qHIRzUUtVDLdFwKZbS-5xXAA6Q4jk"
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI4MmVmOThmYjU2YmU0ODk4OWY4MTY2MTBiNzRhMWQ2YyIsImlhdCI6MTU2NjE5Njk1NSwiZXhwIjoxODgxNTU2OTU1fQ.it3kwuhLKRCSq1wxz3H5rrIEPr0k27naHjOXp3YYN6w"
 };
 
 export var fetchStates = {
