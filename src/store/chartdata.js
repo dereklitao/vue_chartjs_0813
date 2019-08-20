@@ -18,7 +18,7 @@ const mutations = {
   getramhistory(state, history) {
     let end_date = moment();
     history.forEach(element => {
-      if (end_date.diff(element.last_changed, "minutes") < 30) {
+      if (end_date.diff(element.last_changed, "minutes") < 20000) {
         state.ramdata.push({ t: element.last_changed, y: element.state });
       }
     });

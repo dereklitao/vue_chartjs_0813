@@ -37,7 +37,12 @@
   },
   "vue": {
     "devServer": {
-      "proxy": "http://172.16.6.106:8123"
+      "proxy": "http://172.16.6.106:8123",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+      }
     },
     "pluginOptions": {
       "moment": {

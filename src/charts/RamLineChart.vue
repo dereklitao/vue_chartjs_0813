@@ -29,7 +29,7 @@ export default {
             {
               type: "time",
               time: {
-                unit: "minute"
+                unit: "hour"
               }
             }
           ]
@@ -47,7 +47,12 @@ export default {
   },
   beforeMount() {
     this.$axios.get("/history/period").then(response => {
-      this.getramhistory(response.data[10]);
+      console.log(response);
+      response.data.forEach(array => {
+        if (array[0].entity_id === "sensor.memory_free") {
+          this.getramhistory(array);
+        }
+      });
     });
   }
 };

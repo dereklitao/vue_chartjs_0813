@@ -17,6 +17,9 @@
           <v-flex shrink>
             <RamLineChart></RamLineChart>
           </v-flex>
+          <v-flex shrink>
+            <WeatherCard></WeatherCard>
+          </v-flex>
           <v-btn color="success" @click="clickButton">button</v-btn>
         </v-layout>
       </v-container>
@@ -27,11 +30,13 @@
 <script>
 import HelloWorld from "./components/HelloWorld";
 import RamLineChart from "@/charts/RamLineChart";
+import WeatherCard from "@/components/WeatherCard";
 export default {
   name: "App",
   components: {
     HelloWorld,
-    RamLineChart
+    RamLineChart,
+    WeatherCard
   },
   methods: {
     clickButton: function() {
